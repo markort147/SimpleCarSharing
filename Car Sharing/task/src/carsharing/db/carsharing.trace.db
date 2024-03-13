@@ -1,0 +1,69 @@
+2024-03-12 22:45:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(50) UNIQUE NOT NULL
+); [42101-200]
+2024-03-12 22:45:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(50) UNIQUE NOT NULL
+); [42101-200]
+2024-03-12 22:45:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANY" already exists; SQL statement:
+CREATE TABLE COMPANY (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(50) UNIQUE NOT NULL
+); [42101-200]
+2024-03-13 14:15:13 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "company_id" not found [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:352)
+	at carsharing.dao.impl.DbCarDao.lambda$getById$0(DbCarDao.java:48)
+	at carsharing.db.DbClient.executeQueryAndHandle(DbClient.java:96)
+	at carsharing.dao.impl.DbCarDao.getById(DbCarDao.java:44)
+	at carsharing.dao.impl.DbCustomerDao.lambda$getAllAsList$1(DbCustomerDao.java:66)
+	at carsharing.db.DbClient.executeQueryAndHandle(DbClient.java:96)
+	at carsharing.dao.impl.DbCustomerDao.getAllAsList(DbCustomerDao.java:62)
+	at carsharing.gui.command.impl.customer.ListCustomersCommand.execute(ListCustomersCommand.java:17)
+	at carsharing.gui.menu.Menu.display(Menu.java:40)
+	at carsharing.gui.BaseMenuContext.navigateTo(BaseMenuContext.java:18)
+	at carsharing.gui.BaseMenuContext.reset(BaseMenuContext.java:35)
+	at carsharing.gui.menu.Menu.display(Menu.java:40)
+	at carsharing.gui.BaseMenuContext.navigateTo(BaseMenuContext.java:18)
+	at carsharing.gui.BaseMenuContext.backTo(BaseMenuContext.java:54)
+	at carsharing.gui.BaseMenuContext.backTo(BaseMenuContext.java:56)
+	at carsharing.gui.BaseMenuContext.backTo(BaseMenuContext.java:56)
+	at carsharing.gui.command.impl.car.RentCarCommand.execute(RentCarCommand.java:27)
+	at carsharing.gui.menu.Menu.display(Menu.java:40)
+	at carsharing.gui.BaseMenuContext.navigateTo(BaseMenuContext.java:18)
+	at carsharing.gui.command.impl.car.ListCarsForRentingCommand.execute(ListCarsForRentingCommand.java:32)
+	at carsharing.gui.menu.Menu.display(Menu.java:40)
+	at carsharing.gui.BaseMenuContext.navigateTo(BaseMenuContext.java:18)
+	at carsharing.gui.command.impl.company.ListCompaniesForRentingCommand.execute(ListCompaniesForRentingCommand.java:34)
+	at carsharing.gui.menu.Menu.display(Menu.java:40)
+	at carsharing.gui.BaseMenuContext.navigateTo(BaseMenuContext.java:18)
+	at carsharing.gui.menu.impl.customer.ChooseCustomerMenu.lambda$buildMenu$0(ChooseCustomerMenu.java:31)
+	at carsharing.gui.menu.Menu.display(Menu.java:40)
+	at carsharing.gui.BaseMenuContext.navigateTo(BaseMenuContext.java:18)
+	at carsharing.gui.command.impl.customer.ListCustomersCommand.execute(ListCustomersCommand.java:23)
+	at carsharing.gui.menu.Menu.display(Menu.java:40)
+	at carsharing.gui.BaseMenuContext.navigateTo(BaseMenuContext.java:18)
+	at carsharing.Main.main(Main.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160)
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
