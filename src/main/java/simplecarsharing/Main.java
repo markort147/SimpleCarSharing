@@ -12,11 +12,10 @@ import java.util.stream.IntStream;
 
 public class Main {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) {
         Map<String, String> cliArgs = convertArgsToMap(args);
         Configs.init(cliArgs);
 
-        Class.forName ("org.h2.Driver");
         DbClient dbClient = DbClient.getInstance();
 //        dbClient.eraseDatabaseSchema();
         dbClient.initDatabaseSchema();
